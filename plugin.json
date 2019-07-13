@@ -1,8 +1,8 @@
 {
-    "id": "com.mattermost.plugin-starter-template",
-    "name": "Plugin Starter Template",
-    "description": "This plugin serves as a starting point for writing a Mattermost plugin.",
-    "version": "0.1.0",
+    "id": "com.github.kaakaa.mattermost-plugin-loudspeaker",
+    "name": "Plugin Loud Speaker",
+    "description": "Mattermost plugin for announcing something to all teams ",
+    "version": "0.0.9",
     "min_server_version": "5.12.0",
     "server": {
         "executables": {
@@ -10,9 +10,6 @@
             "darwin-amd64": "server/dist/plugin-darwin-amd64",
             "windows-amd64": "server/dist/plugin-windows-amd64.exe"
         }
-    },
-    "webapp": {
-        "bundle_path": "webapp/dist/main.js"
     },
     "settings_schema": {
         "header": "",
