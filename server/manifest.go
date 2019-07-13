@@ -4,6 +4,6 @@ var manifest = struct {
 	ID      string
 	Version string
 }{
-	ID:      "com.mattermost.plugin-starter-template",
-	Version: "0.1.0",
+	ID:      "com.github.kaakaa.mattermost-plugin-loudspeaker",
+	Version: "0.0.9",
 }

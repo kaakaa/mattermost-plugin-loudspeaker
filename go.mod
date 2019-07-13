@@ -9,7 +9,7 @@ require (
 	github.com/hashicorp/go-plugin v1.0.1 // indirect
 	github.com/lib/pq v1.1.1 // indirect
 	github.com/mattermost/go-i18n v1.11.0 // indirect
-	github.com/mattermost/mattermost-server v5.12.0+incompatible
+	github.com/mattermost/mattermost-server v0.0.0-20190705222554-b41421c48b63
 	github.com/pelletier/go-toml v1.4.0 // indirect
 	github.com/pkg/errors v0.8.1
 	github.com/stretchr/testify v1.3.0
