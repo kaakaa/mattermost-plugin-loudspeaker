@@ -16,3 +16,4 @@ If you execute the command like the following, Mattermost create posts on the de
 
 * Restrict usage to system_admin
 * Enable to specify a team to exclude (in admin console?)
+* Think over the plugin name 🤔
