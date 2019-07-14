@@ -81,12 +81,22 @@ func (p *Plugin) setProfileImage() error {
 
 // ExecuteCommand create post for the default channel of all teams
 func (p *Plugin) ExecuteCommand(c *plugin.Context, args *model.CommandArgs) (*model.CommandResponse, *model.AppError) {
+	hasPermission, appErr := p.checkPermission(args.UserId)
+	if appErr != nil {
+		return nil, appErr
+	}
+	if !hasPermission {
+		return &model.CommandResponse{
+			Type: model.COMMAND_RESPONSE_TYPE_EPHEMERAL,
+			Text: "**Failed to create any posts, because you don't have the permission for this command**. \nPlease contact with system administrator for this Mattermost, because this command is only available to system administrators.",
+		}, nil
+	}
+
 	announcement := &announcement{
 		message: strings.TrimLeft(args.Command, fmt.Sprintf("/%s ", commandTrigger)),
 		userID:  args.UserId,
 	}
 
-	// TODO: Check permission
 	teams, appErr := p.API.GetTeams()
 	if appErr != nil {
 		return nil, appErr
@@ -126,6 +136,14 @@ func (p *Plugin) ExecuteCommand(c *plugin.Context, args *model.CommandArgs) (*mo
 		ResponseType: model.COMMAND_RESPONSE_TYPE_EPHEMERAL,
 		Text:         announcement.getResultTable(),
 	}, nil
+}
+
+func (p *Plugin) checkPermission(userID string) (bool, *model.AppError) {
+	u, appErr := p.API.GetUser(userID)
+	if appErr != nil {
+		return false, appErr
+	}
+	return u.IsInRole(model.SYSTEM_ADMIN_ROLE_ID), nil
 }
 
 // ServeHTTP demonstrates a plugin that handles HTTP requests by greeting the world.
