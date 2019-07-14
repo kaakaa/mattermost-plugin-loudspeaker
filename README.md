@@ -1,4 +1,4 @@
-# Mattemrost Plugin **LoudSpeaker** ![CircleCI branch]()
+# Mattemrost Plugin **LoudSpeaker** [![CircleCI](https://circleci.com/gh/kaakaa/mattermost-plugin-loudspeaker.svg?style=svg)](https://circleci.com/gh/kaakaa/mattermost-plugin-loudspeaker)
 
 Mattermost plugin for announcing something to all teams.
 
