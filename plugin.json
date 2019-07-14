@@ -14,6 +14,12 @@
     "settings_schema": {
         "header": "",
         "footer": "",
-        "settings": []
+        "settings": [{
+            "key": "AllowEveryone",
+            "display_name": "Allow Everyone",
+            "type": "bool",
+            "help_text": "When true, all users can use `/loudspeaker` command. Otherwise, `/loudspeaker` command is allowed to system administrator.",
+            "default": "false"
+        }]
     }
 }
