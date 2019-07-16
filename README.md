@@ -14,6 +14,6 @@ If you execute the command like the following, Mattermost create posts on the de
 
 ## To do...
 
-* Restrict usage to system_admin
 * Enable to specify a team to exclude (in admin console?)
+* Add confirmation dialog
 * Think over the plugin name 🤔
