@@ -1,4 +1,4 @@
-module github.com/mattermost/mattermost-plugin-starter-template
+module github.com/kaakaa/mattermost-plugin-loudspeaker
 
 go 1.12
 
